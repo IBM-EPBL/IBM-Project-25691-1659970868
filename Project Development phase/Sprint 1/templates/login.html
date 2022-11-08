@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/styles/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/styles/fontawesome-all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/styles/iofrm-style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/styles/iofrm-theme4.css"
+    />
+    <script>
+      function loadRegisterPage() {
+        // window.location.assign("http://localhost:5000/");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="form-body">
+      <div class="row">
+        <div class="img-holder">
+          <div class="bg"></div>
+          <div class="info-holder">
+            <img src="../static/images/graphic1.svg" alt="" />
+          </div>
+        </div>
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              {% for message in get_flashed_messages() %}
+              <div class="message-flash">
+                <strong>{{message}}</strong>
+              </div>
+              {% endfor %}
+              <div class="page-links">
+                <a href="http://localhost:5000/login" class="active">Login</a
+                ><a href="http://localhost:5000/">Register</a>
+              </div>
+              <form
+                action="http://localhost:5000/login"
+                method="post"
+                id="studentform"
+              >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                  required
+                />
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+                <div class="form-button">
+                  <button
+                    id="submit"
+                    type="submit"
+                    class="ibtn"
+                    onclick="loadRegisterPage();"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/main.js"></script>
+  </body>
+</html>
