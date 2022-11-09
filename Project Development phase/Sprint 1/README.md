@@ -1,4 +1,4 @@
-SPRINT 1 REPORT
+*SPRINT 1 REPORT*
 
 - Login & Registration's is made with HTML, CSS & JS.
 - The working of these pages are controlled and maintained through Python Flask.
