@@ -8,6 +8,4 @@ Sprint 2 Report
 -   Dashboard shows the expense tracking graphs and the list of
     transactions of the user.
 
-```{=html}
-<!-- The link will be available only till 12th Nov (i.e. Submission date of Sprint 3). -->
-```
+
